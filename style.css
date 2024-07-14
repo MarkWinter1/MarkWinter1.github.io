@@ -1,7 +1,7 @@
 html {
 	padding:0;
 	margin:0;
-	background-color:#EDF0EF;
+	background-color: #ACB8B7;
 	color:#49504B;
 	font-family:Inter,
 	-apple-system,
@@ -21,7 +21,7 @@ body {
 	margin: 0 0;
 	align: center;
 	border: 20px #00ff00;
-	filter: drop-shadow(2px 7px 3px #999999);
+	filter: drop-shadow(2px 7px 3px #888888);
 
 }
 
@@ -82,7 +82,7 @@ ul {
 }
 
 ul a:hover {
-	background-color: #EE6123;
+	background-color: #DB9065;
 	color: #fafcfc;
 }
 
