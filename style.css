@@ -1,8 +1,8 @@
 html {
 	padding:0;
 	margin:0;
-	background-color:#999999;
-	color:#fff;
+	background-color:#EDF0EF;
+	color:#49504B;
 	font-family:Inter,
 	-apple-system,
 	BlinkMacSystemFont,
@@ -21,18 +21,38 @@ body {
 	margin: 0 0;
 	align: center;
 	border: 20px #00ff00;
+	filter: drop-shadow(2px 7px 3px #999999);
 
 }
 
 div { 
-	align: center;
-	width: 65%;
+	width: 70%;
 	border: 20px #ff0f00;
-	padding: 50px;
+	padding: 10px;
 	margin: auto;
-	margin-top: 100px;
-	filter: drop-shadow(2.5px 2.5px #666666);
-	background-color: orange;
+	background-color: #FAFCFC;
+	border-radius: 30px;	
+}
+
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text{
+	font-size: 20px;
+	padding-left: 20px;
+	padding top: 20%;
+	float: left;
+}
+
+.image{
+	 padding-right: 0px;
+	 padding-left: 10px;
+	 border-right: 0px;
+	 display: block;
+	 margin: auto;
 }
 
 section{
@@ -40,27 +60,37 @@ section{
 	border: 100px;
 	border-color: black;
 	padding: 20px;
-	margin: 50px;
+	margin: 20px;
 
 }
 
 ul {
   list-style-type: none;
   margin: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
   padding: 0;
+  padding-left: 1%;
   overflow: hidden;
   /*background-color: #feffff;*/
   color: #000000;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
+  width: 98%;
   z-index: 100;
+  float: top;
+}
+
+ul a:hover {
+	background-color: #EE6123;
+	color: #fafcfc;
 }
 
 
 li {
   float: right;
   padding: 0px 0px;
+  filter: drop-shadow(0px 0px 3px #999999)
 }
 
 li a {
