@@ -41,9 +41,15 @@ div {
 	justify-content: center;
 }
 
+.bar{
+	width: 95%;
+	padding-left: -40px;
+	padding-bottom: -40px;
+	margin: 0px;
+}
+
 .text{
 	font-size: 20px;
-	padding-left: 20px;
 	padding top: 20%;
 	float: left;
 }
@@ -67,19 +73,16 @@ section{
 
 ul {
   list-style-type: none;
-  margin: 0;
   margin-top: 1%;
   margin-bottom: 1%;
-  padding: 0;
-  padding-left: 1%;
+  margin-left: 0px;
+  padding-left: 0px;
   overflow: hidden;
   /*background-color: #feffff;*/
   color: #000000;
   position: sticky;
   top: 0;
-  width: 98%;
   z-index: 100;
-  float: top;
 }
 
 ul a:hover {
@@ -89,7 +92,7 @@ ul a:hover {
 
 
 li {
-  float: right;
+  float: left;
   padding: 0px 0px;
   filter: drop-shadow(0px 0px 3px #999999)
 }
