@@ -35,6 +35,13 @@ div {
 	border-radius: 30px;	
 }
 
+.array{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+}
+
 .container{
 	display: flex;
 	align-items: center;
