@@ -2,7 +2,7 @@ html {
 	padding:0;
 	margin:0;
 	background-color: #ACB8B7;
-	color:#49504B;
+	color: #49504B;
 	font-family:Inter,
 	-apple-system,
 	BlinkMacSystemFont,
@@ -79,17 +79,41 @@ section{
 }
 
 ul {
-  list-style-type: none;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 0px;
-  padding-left: 0px;
-  overflow: hidden;
-  /*background-color: #feffff;*/
-  color: #000000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+	list-style-type: none;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 0px;
+	padding-left: 0px;
+	overflow: hidden;
+	/*background-color: #feffff;*/
+	color: #49504B;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+ul a:visited {
+	color: #49504B;
+}
+
+ul a:active {
+	color: #49504B;
+}
+
+a {
+	color: #49504B;
+}
+
+a:hover {
+	color: #71794A;
+}
+
+a:visited {
+	color: #DC602E;
+}
+
+a:active {
+	color: #71794A;
 }
 
 ul a:hover {
