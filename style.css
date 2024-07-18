@@ -29,6 +29,7 @@ div {
 	width: 70%;
 	border: 20px #ff0f00;
 	padding: 10px;
+	min-height: 100%;
 	margin: auto;
 	margin-bottom: 20px;
 	background-color: #FAFCFC;
@@ -37,21 +38,23 @@ div {
 
 .array{
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: stretch;
+	justify-content: space-around;
 	background-color: transparent;
 }
 
-.container{
+
+.container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: auto;
 }
 
 .bar{
 	width: 95%;
 	padding-left: -40px;
-	padding-bottom: -40px;
+	padding-bottom: 40px;
 	margin: 0px;
 }
 
