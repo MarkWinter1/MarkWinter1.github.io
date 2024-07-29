@@ -25,15 +25,14 @@ body {
 
 }
 
-div { 
+div {
 	width: 70%;
 	border: 20px #ff0f00;
 	padding: 5px;
 	min-height: 100%;
 	margin: auto;
-	margin-bottom: 20px;
 	background-color: #FAFCFC;
-	border-radius: 30px;	
+	border-radius: 30px;
 }
 
 .array{
@@ -46,16 +45,16 @@ div {
 
 .container {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
+	align-items: stretch;
+	justify-content: space-around;
+	margin-bottom: 20px;
 }
 
 .bar{
 	width: 95%;
 	padding-left: -40px;
 	padding-bottom: 40px;
-	margin: 0px;
+	margin: auto;
 }
 
 .text{
