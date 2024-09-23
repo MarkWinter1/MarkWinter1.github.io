@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\sprodkart.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\carbonnano.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:carbonnano.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\aboutme.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:aboutme.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\spacefillingcurves.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,14 +43,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:zoner.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\aboutme.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:aboutme.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Memes3.0\\Development\\MarkWinter1.github.io\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -75,13 +75,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAACUAAABlAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAADEAAACDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-07-18T18:25:15.439Z",
               "IsPinned": true,
@@ -89,13 +89,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "aboutme.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\aboutme.html",
               "RelativeDocumentMoniker": "aboutme.html",
               "ToolTip": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\aboutme.html",
               "RelativeToolTip": "aboutme.html",
-              "ViewState": "AQIAAEAAAAAAAAAAAJiCwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "OverriddenGroupName": "",
               "WhenOpened": "2024-07-18T18:25:35.787Z",
@@ -104,13 +104,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "projects.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\projects.html",
               "RelativeDocumentMoniker": "projects.html",
               "ToolTip": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\projects.html",
               "RelativeToolTip": "projects.html",
-              "ViewState": "AQIAAGQAAAAAAAAAAADwv3MAAAAnAAAA",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAQwJ0AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-07-18T17:15:02.76Z",
               "IsPinned": true,
@@ -118,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "spacefillingcurves.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\spacefillingcurves.html",
               "RelativeDocumentMoniker": "spacefillingcurves.html",
@@ -126,8 +126,7 @@
               "RelativeToolTip": "spacefillingcurves.html",
               "ViewState": "AQIAABIAAAAAAAAAAAAAABIAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-05T15:52:52.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:52:52.245Z"
             },
             {
               "$type": "Document",
@@ -137,7 +136,7 @@
               "RelativeDocumentMoniker": "carbonnano.html",
               "ToolTip": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\carbonnano.html",
               "RelativeToolTip": "carbonnano.html",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACEAAAAUAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAC4AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-08-05T15:52:20.129Z",
               "EditorCaption": ""
@@ -150,14 +149,14 @@
               "RelativeDocumentMoniker": "sprodkart.html",
               "ToolTip": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\sprodkart.html",
               "RelativeToolTip": "sprodkart.html",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACIAAAAvAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-08-05T15:49:26.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "fishyphus.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\fishyphus.html",
               "RelativeDocumentMoniker": "fishyphus.html",
@@ -165,12 +164,11 @@
               "RelativeToolTip": "fishyphus.html",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-05T15:51:37.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:51:37.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "boxofsquingus.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\boxofsquingus.html",
               "RelativeDocumentMoniker": "boxofsquingus.html",
@@ -178,12 +176,11 @@
               "RelativeToolTip": "boxofsquingus.html",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-05T15:50:11.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:50:11.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "sustainability.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\sustainability.html",
               "RelativeDocumentMoniker": "sustainability.html",
@@ -191,12 +188,11 @@
               "RelativeToolTip": "sustainability.html",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-05T15:46:38.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:46:38.21Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "zoner.html",
               "DocumentMoniker": "C:\\Memes3.0\\Development\\MarkWinter1.github.io\\zoner.html",
               "RelativeDocumentMoniker": "zoner.html",
@@ -204,8 +200,7 @@
               "RelativeToolTip": "zoner.html",
               "ViewState": "AQIAABIAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-05T15:45:06.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:45:06.47Z"
             },
             {
               "$type": "Document",
