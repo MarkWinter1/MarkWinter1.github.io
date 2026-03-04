@@ -1,124 +1,130 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
-
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="gullnohighlight.png">
-
-<title>Mark Winter Projects</title>
-
-<ul style="padding-left: 1%; width: 98%;">
-	<li><a href="index.html">Home</a></li>
-	<li style="float:right"><a href="">More About Me</a></li>
-	<li style="float:right"><a href="projects.html">Projects</a></li>
-	<li style="float:right"><a href="Resume.pdf" target="_blank">My Resume</a></li>
-</ul> 
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="gullnohighlight.png">
+  <title>Mark Winter — About Me</title>
 </head>
-
-
 <body>
 
-	<!-- 1: Education -->
-	<div class="container">
-		<div class="image" style="width: 10%; text-align: center">
-			<img src="gradcap.svg" alt="Graduation Cap" width="80%" height="80%">
-		</div>
-		<div class="text" style="width: 90%">
-			<div class="bar">
-				<h1>Education</h1>
-				<h3>Recent Graduate from the University of St Andrews</h3>
-				<p style="margin-bottom: 1%;">
-					I graduated with a Master’s in Mathematics from the University of St Andrews in 2024, having focused on pure mathematics and the applications of computer programming to mathematical problems. My dissertation was entitled <a href="Diss.pdf" target="_blank">'A Walk along a Space-Filling Curve: Generating, Analysing, and Modeling Space-Filling Curves.'</a> I analyzed space-filling curves by encoding them using Python and generating graphical representations of approximations to the curves, alongside more traditional mathematical analysis.
-				</p>
-			</div>
-		</div>
-	</div>
+  <div class="card-wrap">
 
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html" class="active">More About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="Resume.pdf" target="_blank">My Resume</a></li>
+      </ul>
+    </nav>
 
-	<!-- 2: Coding -->
-	<div class="container">
-		<div class="image" style="width: 10%; text-align: center;">
-			<img src="coding.svg" alt="Simplistic image of a computer terminal " width="80%" height="80%">
-		</div>
-		<div class="text" style="width: 90%">
-			<div class="bar">
-				<h1>Coding</h1>
-				<h3>Experienced Professional and Passionate Hobbyist</h3>
-				<p style="margin-bottom: 1%;">
-					<p>I have a wide variety of professional programming experience. Specifially, I have worked with Skyscraper Foundry for the last few years, analyzing New York City's vast zoning data and creating an AI-assisted predictive planning tool. I have also worked with M. Arch Architects on their zoning app, Zoner, using Ruby on Rails to create the structure of the application. I also spent the last summer working with a team from the University of St Andrews to create an internal sustainability web application. In these projects, I have used everything from Python to Javascript to SQL.</p>
-					<p>I also enjoy working on personal programming projects. My game development work is explored further below, but on my own, I do the Advent of Code, l33tcode, and spend time developing my personal Linux computer.</p>
+    <div class="inner">
 
-				</p>
-			</div>
-		</div>
-	</div>
+      <!-- Education -->
+      <div class="about-section">
+        <div class="about-icon"><img src="gradcap.svg" alt="Graduation cap"></div>
+        <div class="about-body">
+          <h1>Education</h1>
+          <h3>Recent Graduate from the University of St Andrews</h3>
+          <p>
+            I graduated with a Master's in Mathematics from the University of St Andrews in 2024, having focused on pure
+            mathematics and the applications of computer programming to mathematical problems. My dissertation was entitled
+            <a href="Diss.pdf" target="_blank">'A Walk along a Space-Filling Curve: Generating, Analysing, and Modeling
+            Space-Filling Curves.'</a> I analyzed space-filling curves by encoding them using Python and generating graphical
+            representations of approximations to the curves, alongside more traditional mathematical analysis.
+          </p>
+        </div>
+      </div>
 
+      <!-- Coding -->
+      <div class="about-section">
+        <div class="about-icon"><img src="coding.svg" alt="Computer terminal"></div>
+        <div class="about-body">
+          <h1>Coding</h1>
+          <h3>Experienced Professional and Passionate Hobbyist</h3>
+          <p>
+            I have a wide variety of professional programming experience. Specifically, I have worked with Skyscraper Foundry
+            for the last few years, analyzing New York City's vast zoning data and creating an AI-assisted predictive planning
+            tool. I have also worked with M. Arch Architects on their zoning app, Zoner, using Ruby on Rails to create the
+            structure of the application. I also spent the last summer working with a team from the University of St Andrews
+            to create an internal sustainability web application. In these projects, I have used everything from Python to
+            Javascript to SQL.
+          </p>
+          <p>
+            I also enjoy working on personal programming projects. My game development work is explored further below, but
+            on my own I do the Advent of Code, LeetCode, and spend time developing my personal Linux computer.
+          </p>
+        </div>
+      </div>
 
-<!-- 3: Gaming -->
-	<div class="container">
-		<div class="image" style="width: 10%; text-align: center">
-			<img src="game.svg" alt="Simplistic image of a retro controller" width="80%" height="80%">
-		</div>
-		<div class="text" style="width: 90%">
-			<div class="bar">
-				<h1>Video Game Development</h1>
-				<h3>Full Stack Game Development Team</h3>
-				<p style="margin-bottom: 1%;">
-					<p>I spend much of my free time working on video game development with SPRODSOFT, a team of three friends not counting myself. We have produced four games in the last three years: Box of Squingus (very well received!), Fishyfus of the Deep: Legend of the Eight Gems, Sprodkart, and Project Margrave.</p>
-					<p>Each of these games involved full stack development and many opportunities to learn and apply new skills, languages, and engines. Through this work, I have improved my proficiency with C#, Godot, and Unity and learned about all different aspects of development, from back end to interface to 3D modeling.</p>
+      <!-- Game Development -->
+      <div class="about-section">
+        <div class="about-icon"><img src="game.svg" alt="Retro controller"></div>
+        <div class="about-body">
+          <h1>Video Game Development</h1>
+          <h3>Full Stack Game Development Team</h3>
+          <p>
+            I spend much of my free time working on video game development with SPRODSOFT, a team of three friends not
+            counting myself. We have produced four games in the last three years: Box of Squingus (very well received!),
+            Fishyphus of the Deep: Legend of the Eight Gems, Sprodkart, and Project Margrave.
+          </p>
+          <p>
+            Each of these games involved full stack development and many opportunities to learn and apply new skills,
+            languages, and engines. Through this work I have improved my proficiency with C#, Godot, and Unity and learned
+            about all different aspects of development, from back end to interface to 3D modeling.
+          </p>
+        </div>
+      </div>
 
-				</p>
-			</div>
-		</div>
-	</div>
+      <!-- Rowing -->
+      <div class="about-section">
+        <div class="about-icon"><img src="oars.svg" alt="Crossed oars"></div>
+        <div class="about-body">
+          <h1>Rowing</h1>
+          <h3>Trained Coxswain and Crew Member with Competition Experience</h3>
+          <p>
+            I am an experienced coxswain and rower and love working outdoors! I've rowed with the
+            <a href="https://villagecommunityboathouse.org/" target="_blank">Village Community Boathouse</a> for many years,
+            rowing in their Sunday open sessions. I competed in high school with their youth crew, winning the
+            <a href="https://old.villagecommunityboathouse.org/2019/03/snow-row-2019.html" target="_blank">2019 Snow Row</a>,
+            the <a href="https://old.villagecommunityboathouse.org/2018/11/icebreaker-2018.html" target="_blank">2018 Icebreaker</a>,
+            and the <a href="https://old.villagecommunityboathouse.org/2018/10/head-of-the-weir-2018.html" target="_blank">2018 Head of the Weir Race</a>.
+            I also occasionally join their annual
+            <a href="http://web.archive.org/web/20230324224432/https://www.villagecommunityboathouse.org/2019-row-around-manhattan/" target="_blank">Row Around Manhattan</a>.
+          </p>
+          <p>
+            I also often participate in their boatbuilding sessions, helping to craft the
+            <a href="https://villagecommunityboathouse.org/our-fleet" target="_blank">historic Whitehall gigs and other boats</a>
+            used by the VCB, specifically the two boats Zoë and Integrity.
+          </p>
+        </div>
+      </div>
 
-	<!-- 4: Rowing and Boats -->
-	<div class="container">
-		<div class="image" style="width: 10%; text-align: center">
-			<img src="oars.svg" alt="Simplistic image of a pair of crossed oars" width="80%" height="80%">
-		</div>
-		<div class="text" style="width: 90%">
-			<div class="bar">
-				<h1>Rowing</h1>
-				<h3>Trained Coxswain and Crew Member with Competition Experience</h3>
-				<p style="margin-bottom: 1%;">
-					<p>I am an experienced coxswain and rower and love working outdoors! I've rowed with the <a href="https://villagecommunityboathouse.org/" target="_blank">Village Community Boathouse</a> for many years, rowing in their Sunday open sessions. I competed in high school with their youth crew, winning the <a href="https://old.villagecommunityboathouse.org/2019/03/snow-row-2019.html" target="_blank">2019 Snow Row</a>, the <a href="https://old.villagecommunityboathouse.org/2018/11/icebreaker-2018.html" target="_blank">2018 Icebreaker</a>, and the <a href="https://old.villagecommunityboathouse.org/2018/10/head-of-the-weir-2018.html" target="_blank">2018 Head of the Weir Race</a>. I also occasionally join the ultimate test of endurance: their annual <a href="http://web.archive.org/web/20230324224432/https://www.villagecommunityboathouse.org/2019-row-around-manhattan/" target="_blank">Row Around Manhattan</a>.</p>
-					<p>I also often participate in their boatbuilding sessions, helping to craft the <a href="https://villagecommunityboathouse.org/our-fleet" target="_blank">historic Whitehall gigs and other boats</a> used by the VCB, specifically the two boats Zoë and Integrity.</p>
+      <!-- Music -->
+      <div class="about-section">
+        <div class="about-icon"><img src="euphonium.svg" alt="Euphonium"></div>
+        <div class="about-body">
+          <h1>Music</h1>
+          <h3>Euphonium and Other Brass Instruments</h3>
+          <p>
+            I have played the euphonium for twelve years, in concert, symphonic, jazz, and marching bands. I have also played
+            the trombone and trumpet on occasion to expand my abilities. I also conducted Robert W. Smith's "The Maelstrom"
+            with the University of St Andrews Wind Band.
+          </p>
+          <p>
+            My last high school performance can be viewed <a href="https://fb.watch/tp2uHKslEx/" target="_blank">here</a>.
+            My most recent college performance, including my conducting of "The Maelstrom," can be viewed
+            <a href="https://youtu.be/edzzFER3Xt4?feature=shared" target="_blank">here</a>.
+          </p>
+        </div>
+      </div>
 
-				</p>
-			</div>
-		</div>
-	</div>
+    </div>
+  </div>
 
-	<!-- 5: Horn Playing -->
-	<div class="container">
-		<div class="image" style="width: 10%; text-align: center">
-			<img src="euphonium.svg" alt="Simplistic image of a euphonium" width="80%" height="80%">
-		</div>
-		<div class="text" style="width: 90%">
-			<div class="bar">
-				<h1>Music</h1>
-				<h3>Euphonium and other Brass Instruments</h3>
-				<p style="margin-bottom: 1%;">
-					<p>I have played the euphonium for twelve years, in concert, symphonic, jazz, and marching bands. I have also played the trombone and trumpet on occasion to expand my abilities. I also conducted Robert W. Smith's "The Maelstrom" with the University of St Andrews Wind Band.</p>
-					<p>My last high school performance can be viewed <a href="https://fb.watch/tp2uHKslEx/" target="_blank">here</a>. My most recent college performance, including my conductiong of "The Maelstrom" can be viewed here <a href="https://youtu.be/edzzFER3Xt4?feature=shared" target="_blank">here</a>.</p>
-				</p>
-			</div>
-		</div>
-	</div>
-
-
-
+  <footer><small>Copyright &copy; 2024 Mark Winter. All rights reserved.</small></footer>
 
 </body>
-
- <footer style="text-align: center; color:#49504B"> <small>Copyright &copy; 2024 Mark Winter. All rights reserved.</small> </footer> 
-
- </html>
+</html>

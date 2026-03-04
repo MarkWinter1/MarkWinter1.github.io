@@ -1,209 +1,192 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
-
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="gullnohighlight.png">
-
-<title>Mark Winter Projects</title>
-
-<ul style="padding-left: 1%; width: 98%;">
-	<li><a href="index.html">Home</a></li>
-	<li style="float:right"><a href="aboutme.html">More About Me</a></li>
-	<li style="float:right"><a href="projects.html">Projects</a></li>
-	<li style="float:right"><a href="Resume.pdf" target="_blank">My Resume</a></li>
-</ul> 
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="gullnohighlight.png">
+  <title>Mark Winter — Projects</title>
 </head>
-
-
 <body>
 
-	<!-- 0: GnomesHome -->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="spacefillingcurves.png" alt="Schoenberg's space filling curve" width="80%" height="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="gnomeshome.html"> -->
-					Gnomes' Home
-					<!-- </a> -->
-				</h1>
-				<p>
-					A Ludum Dare 56 submission, this thrilling game has the player directing
-				</p>
+  <div class="card-wrap">
 
-				<img src="python.svg" alt="Python logo" width="30px">
-				<img src="latex.svg" alt="LATEX logo" width="30px">
-			</div>
-		</div>
-	</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">More About Me</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="Resume.pdf" target="_blank">My Resume</a></li>
+      </ul>
+    </nav>
 
-	<!-- 1: Space Filling Curves -->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="spacefillingcurves.png" alt="Schoenberg's space filling curve" width="80%" height="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="spacefillingcurves.html"> -->
-					Space-Filling Curves
-					<!-- </a> -->
-				</h1>
-				<p>
-					A master's thesis titled "A Walk Along a Space-Filling Curve" investigating the analytic properties of space filling curves, investigated as the accumulators of iterated function systems. This work involved a substantial amount of programming done in python, gathering data for a full length research paper written in LaTeX. Both the paper and the code can be found <a href="Diss.pdf">here</a>.
-				</p>
+    <div class="inner">
 
-				<img src="python.svg" alt="Python logo" width="30px">
-				<img src="latex.svg" alt="LATEX logo" width="30px">
-			</div>
-		</div>
-	</div>
+      <!-- GitHub Analyzer -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="squarewhilygull.jpg" alt="GitHub Contribution Analyzer">
+        </div>
+        <div class="proj-body">
+          <h1><a href="github-analysis.html">GitHub Contribution Analyzer</a></h1>
+          <h3>Web Tool · HTML / JavaScript</h3>
+          <p>
+            A single-page web tool that pulls live data from any public GitHub repository via the GitHub REST API and
+            generates a ranked breakdown of top contributors, PR activity, and issue statistics. Built to be hosted
+            as a standalone HTML file with no dependencies.
+          </p>
+          <div class="tech-icons">
+            <img src="javascript.svg" alt="JavaScript">
+          </div>
+        </div>
+      </div>
 
-	<!-- 2: Box of Squingus -->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="squingus.png" alt="Still from Box of Squingus showing Squingus sitting on a ledge" width="80%" height="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="boxofsquingus.html"> -->
-					Box of Squingus
-					<!-- </a> -->
-				</h1>
-				<p>A platformer spawned from Ludum Dare Game Jam #54. This game sees the player as Squingus, a charming but troubled cat, navigate the world from inside of its box, the titular Box of Squingus in this challenging and creative platforming challenge. Can the player transform Squingus' curse into a valuable asset? Won 16th out of over 1000 submissions for innovation.</p>
-				<img src="godot.svg" alt="Godot logo" width="30px">
-				<img src="cplusplus.svg" alt="C++ logo" width="30px" style="filter: brightness(0) saturate(100%) invert(32%) sepia(4%) saturate(674%) hue-rotate(85deg) brightness(91%) contrast(93%)">
-			</div>
-		</div>
-	</div>
+      <!-- Space Filling Curves -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="spacefillingcurves.png" alt="Schoenberg's space filling curve">
+        </div>
+        <div class="proj-body">
+          <h1>Space-Filling Curves</h1>
+          <h3>Master's Dissertation · University of St Andrews, 2024</h3>
+          <p>
+            A master's thesis titled "A Walk Along a Space-Filling Curve" investigating the analytic properties of
+            space-filling curves, investigated as the accumulators of iterated function systems. This work involved a
+            substantial amount of programming done in Python, gathering data for a full-length research paper written
+            in LaTeX. Both the paper and the code can be found <a href="Diss.pdf">here</a>.
+          </p>
+          <div class="tech-icons">
+            <img src="python.svg" alt="Python">
+            <img src="latex.svg" alt="LaTeX">
+          </div>
+        </div>
+      </div>
 
+      <!-- Box of Squingus -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="squingus.png" alt="Still from Box of Squingus">
+        </div>
+        <div class="proj-body">
+          <h1>Box of Squingus</h1>
+          <h3>Ludum Dare #54 · SPRODSOFT</h3>
+          <p>
+            A platformer spawned from Ludum Dare Game Jam #54. This game sees the player as Squingus, a charming but
+            troubled cat, navigate the world from inside its box in a challenging and creative platforming adventure.
+            Won 16th out of over 1,000 submissions for innovation.
+          </p>
+          <div class="tech-icons">
+            <img src="godot.svg" alt="Godot">
+            <img src="cplusplus.svg" alt="C++" style="filter:brightness(0) saturate(100%) invert(32%) sepia(4%) saturate(674%) hue-rotate(85deg) brightness(91%) contrast(93%)">
+          </div>
+        </div>
+      </div>
 
-	<!-- 3: Fishyphus of the Deep-->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="fishyphus.png" alt="Logo for Fishyphus of the Deep" width="80%" height="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="fishyphus.html"> -->
-					Fishyphus of The Deep
-					<!-- </a> -->
-				</h1>
+      <!-- Fishyphus -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="fishyphus.png" alt="Logo for Fishyphus of the Deep">
+        </div>
+        <div class="proj-body">
+          <h1>Fishyphus of the Deep</h1>
+          <h3>Ludum Dare #52 · SPRODSOFT</h3>
+          <p>
+            A collectathon-style game spawned from Ludum Dare Game Jam #52. The player, a sockeye salmon, ventures
+            into the dangerous ocean to bring back the legendary eight gems and turn the tide on the trawling nets
+            that dredge The Deep.
+          </p>
+          <div class="tech-icons">
+            <img src="unity.svg" alt="Unity">
+            <img src="csharp.svg" alt="C#">
+            <img src="blender.svg" alt="Blender">
+          </div>
+        </div>
+      </div>
 
-				<p>
-					A collectathon-style game spawned from Ludum Dare Game Jam #52. This game sees the player, a sockeye salmon, venture out into the dangerous ocean to bring back the legendary eight gems. With the power of the gems, the player has the chance to "turn the tide" as it were on the trawling nets that dangerously dredge The Deep.
-				</p>
+      <!-- Embedding Sustainability -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="uosta.jpg" alt="University of St Andrews logo">
+        </div>
+        <div class="proj-body">
+          <h1>Embedding Sustainability</h1>
+          <h3>University of St Andrews · Summer Project</h3>
+          <p>
+            A structured summer project at the University of St Andrews aimed at producing a tool to educate students
+            on sustainability. This involved working with a team to research and develop a JavaScript app to form part
+            of the university's curriculum on sustainability.
+          </p>
+          <div class="tech-icons">
+            <img src="javascript.svg" alt="JavaScript">
+          </div>
+        </div>
+      </div>
 
-				<img src="unity.svg" alt="Unity logo" width="30px">
-				<img src="csharp.svg" alt="C# logo" width="30px">
-				<img src="blender.svg" alt="Blender logo" width="30px">
-			</div>
-		</div>
-	</div>
+      <!-- Sprodkart -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="sprodkart.png" alt="The Grand Slam kart from Sprodkart">
+        </div>
+        <div class="proj-body">
+          <h1>SPRODKART</h1>
+          <h3>Original Title · SPRODSOFT</h3>
+          <p>
+            A refreshing take on the racing game genre, heavily inspired by Kirby Air Ride's City Trial mode. Players
+            compete in a variety of racing challenges — drag races, agility courses, and long-distance jumps — in
+            randomly spawned vehicles, collecting power-ups along the way to prepare for the final race.
+          </p>
+          <div class="tech-icons">
+            <img src="unity.svg" alt="Unity">
+            <img src="csharp.svg" alt="C#">
+            <img src="blender.svg" alt="Blender">
+          </div>
+        </div>
+      </div>
 
-	<!-- 4: Embedding Sustainability for UoStA -->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="uosta.jpg" alt="University of St Andrews logo" width="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="sustainability.html"> -->
-					Embedding Sustainability
-					<!-- </a> -->
-				</h1>
-				<p>A structured summer project at the University of St Andrews aimed at producing a tool to educate students on sustainability. This involved working with a team to research and develop a javascript app to form a part of the university’s curriculum on sustainability.</p>
-				<img src="javascript.svg" alt="Javascript logo" width="30px">
-			</div>
-		</div>
-	</div>
+      <!-- Zoner -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="zoner.png" alt="Zoner logo">
+        </div>
+        <div class="proj-body">
+          <h1>Zoner</h1>
+          <h3>M. Arch Architects · Professional</h3>
+          <p>
+            An NYC zoning app that makes the city's incredibly complex building code understandable to developers.
+            I used Ruby on Rails to build the backend of the application — specifically the components that query
+            public databases and parse that information into the product.
+          </p>
+          <div class="tech-icons">
+            <img src="rails.svg" alt="Rails">
+            <img src="rubyonrails.svg" alt="Ruby on Rails">
+            <img src="sql.svg" alt="SQL">
+          </div>
+        </div>
+      </div>
 
+      <!-- Carbon Nanospheres -->
+      <div class="proj-row">
+        <div class="proj-thumb">
+          <img src="exploravision.jpg" alt="Exploravision logo">
+        </div>
+        <div class="proj-body">
+          <h1>Carbon Nanospheres</h1>
+          <h3>Exploravision · National 2nd Place</h3>
+          <p>
+            Won second place nationally in the Exploravision science research paper competition (Grades 10–12) for
+            "Using Carbon Nanospheres to Reduce Decoherence in Quantum Computing Systems." The paper investigates
+            the electromagnetic stability of carbon nanospheres — a feature essential to practical quantum computing.
+          </p>
+          <div class="tech-icons">
+            <img src="jstor.svg" alt="JSTOR" style="width:60px;height:auto">
+          </div>
+        </div>
+      </div>
 
-	<!-- 5: Sprodkart -->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="sprodkart.png" alt="the Grand Slam kart from Sprodkart" width="80%" height="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="sprodkart.html"> -->
-					SPRODKART
-					<!-- </a> -->
-				</h1>
-				<p>
-					A refreshing take on the racing game genre, heavily inspired by Kirby Air Ride's City Trial mode. This game sees players competing in a variety of racing challenges, from drag races to agility courses to long distance jumps. Players ride in randomly spawned vehicles and collect randomly spawning power-ups to better their chances as the race goes on, and to prepare for the final race to determine a winner.
-				</p>
+    </div>
+  </div>
 
-
-				<img src="unity.svg" alt="Unity logo" width="30px">
-				<img src="csharp.svg" alt="C# logo" width="30px">
-				<img src="blender.svg" alt="Blender logo" width="30px">
-			</div>
-		</div>
-	</div>
-
-
-	<!-- 6: Zoner -->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="zoner.png" alt="Zoner logo, copyright M. Arch Architects" width="80%" height="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="Zoner.html"> -->
-					Zoner
-					<!-- </a> -->
-				</h1>
-				<p>An exciting new zoning app that makes NYC's incredibly complex building code understandable to developers. I used Ruby on Rails to code the backend of the application, specifically the components that served to query public databases and parse that information into our product.</p>
-				<img src="rails.svg" alt="Ruby logo" width="30px">
-				<img src="rubyonrails.svg" alt="Ruby on Rails logo" width="30px">
-				<img src="sql.svg" alt="SQL logo" width="30px">
-			</div>
-		</div>
-	</div>
-
-
-	<!-- 7: Carbon Nanospheres -->
-	<div class="container">
-		<div class="image" style="width: 35%; text-align: center">
-			<img src="exploravision.jpg" alt="Exploravision logo" width="80%" height="80%" style="border-radius: 20%">
-		</div>
-		<div class="text" style="width: 65%">
-			<div class="bar">
-				<h1>
-					<!-- <a href="carbonnano.html"> -->
-					Carbon Nanospheres
-					<!-- </a> -->
-				</h1>
-				<p>
-					I won second place nationally in the Exploravision science research paper competition for Grades 10-12, for my work on the paper "Using Carbon Nanospheres to Reduce Decoherence in Quantum Computing Systems". The paper reviews existing research and investigates the properties of the carbon nanosphere, a particular formation of carbon, with exceptional electromagnetic stability, a feature that is essential to practical quantum computing.
-				</p>
-
-				<img src="jstor.svg" alt="JSTOR logo" width="75px">
-			</div>
-		</div>
-	</div>
-
+  <footer><small>Copyright &copy; 2024 Mark Winter. All rights reserved.</small></footer>
 
 </body>
-
-<footer style="text-align: center; color:#49504B"> 
-	 <small>Copyright &copy; 2024 Mark Winter. All rights reserved.</small> 
-</footer> 
-
- </html>
+</html>

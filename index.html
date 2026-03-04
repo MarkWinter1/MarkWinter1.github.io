@@ -1,52 +1,71 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
-
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="gullnohighlight.png">
-
-	<title>Mark Winter</title>
-
-	<ul style="padding-left: 1%; width: 98%;">
-		<li><a href="index.html">Home</a></li>
-		<li style="float:right"><a href="aboutme.html">More About Me</a></li>
-		<li style="float:right"><a href="projects.html">Projects</a></li>
-		<li style="float:right"><a href="Resume.pdf" target="_blank">My Resume</a></li>
-	</ul>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="gullnohighlight.png">
+  <title>Mark Winter</title>
 </head>
-
 <body>
 
-	<div class="container">
-		<div class="image" style="">
-			<img src="gull.jpg" alt="Seagull screaming on a rock" width="80%" height="80%" style="border-radius: 50%;">
-		</div>
-		<div class="text" style="">
-			<div class="bar">
-				<h1>Mark Winter</h1>
-				<h3>Recent Graduate from the University of Saint Andrews</h3>
-				<p style="">Currently seeking a new software engineering role to utilize my wide skill set and expand my knowledge base!
-				</p>
-			</div>
+  <div class="card-wrap">
 
-			<ul>
-				<li><a href="https://github.com/MarkWinter1" target="_blank"><img src="GitHub_Invertocat_Logo.svg" width="30px"></a></li>
-				<li><a href="https://www.linkedin.com/in/mark-winter/" target="_blank"><img src="linkedin.svg" alt="My linkedin page" width="30px"></a></li>
-				<li><a href="mailto:marknwinter01@gmail.com" target="_blank"><img src="email.svg" alt="My email address" width="30px"></a></li>
-				<li><a href="tel:+16464301802" target="_blank"><img src="phone.svg" alt="My linkedin page" width="30px"></a></li>
-			</ul> 
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="aboutme.html">More About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="Resume.pdf" target="_blank">My Resume</a></li>
+      </ul>
+    </nav>
 
-		</div>
-	</div>
+    <div class="inner">
+
+      <!-- Hero -->
+      <section class="hero">
+        <img src="gull.jpg" alt="Mark Winter" class="hero-photo">
+        <div class="hero-text">
+          <h1>Mark Winter</h1>
+          <p class="hero-subtitle">Recent Graduate · University of Saint Andrews</p>
+          <p class="hero-bio">
+            Software engineer with a broad skill set, looking for the right role to grow and make an impact.
+            Passionate about building things that are well-crafted and actually useful.
+          </p>
+          <ul class="socials">
+            <li><a href="https://github.com/MarkWinter1" target="_blank" title="GitHub"><img src="GitHub_Invertocat_Logo.svg" alt="GitHub"></a></li>
+            <li><a href="https://www.linkedin.com/in/mark-winter/" target="_blank" title="LinkedIn"><img src="linkedin.svg" alt="LinkedIn"></a></li>
+            <li><a href="mailto:marknwinter01@gmail.com" title="Email"><img src="email.svg" alt="Email"></a></li>
+            <li><a href="tel:+16464301802" title="Phone"><img src="phone.svg" alt="Phone"></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects highlight -->
+      <hr class="divider">
+      <h2 class="section-label">Projects</h2>
+      <div class="project-grid">
+
+        <a href="github-analysis.html" class="project-card fade-up">
+          <span class="project-icon">⬡</span>
+          <span class="project-name">GitHub Contribution Analyzer</span>
+          <p class="project-desc">Pull live contributor data from any public GitHub repository and generate a ranked analysis of top contributors and PR activity.</p>
+          <span class="project-cta">Open tool →</span>
+        </a>
+
+        <a href="projects.html" class="project-card fade-up">
+          <span class="project-icon">◻</span>
+          <span class="project-name">More Projects</span>
+          <p class="project-desc">Browse the full list — from my master's dissertation and game jam entries to professional engineering work.</p>
+          <span class="project-cta">View all →</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer><small>Copyright &copy; 2024 Mark Winter. All rights reserved.</small></footer>
 
 </body>
-
-<footer style="text-align: center; color:#49504B"> <small>Copyright &copy; 2024 Mark Winter. All rights reserved.</small> </footer>
 </html>

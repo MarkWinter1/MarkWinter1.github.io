@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Contribution Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white:    #ffffff;
+    --off:      #f7f7f7;
+    --light:    #eeeeee;
+    --border:   #d8d8d8;
+    --mid:      #999999;
+    --dark:     #444444;
+    --ink:      #222222;
+    --link:     #2a6496;
+    --link-hov: #1a4060;
+    --accent:   #2a6496;
+    --green:    #3a7d44;
+    --red:      #c0392b;
+    --serif:    'Merriweather', Georgia, serif;
+    --sans:     'Lato', Arial, sans-serif;
+    --nav-h:    52px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--white);
+  }
+
+  a { color: var(--link); text-decoration: none; }
+  a:hover { color: var(--link-hov); text-decoration: underline; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-right: auto;
+  }
+  .nav-brand:hover { text-decoration: none; color: var(--ink); }
+
+  .nav-links { list-style: none; display: flex; }
+
+  .nav-links li a {
+    display: block;
+    padding: 0 1rem;
+    height: var(--nav-h);
+    line-height: var(--nav-h);
+    font-size: 0.85rem;
+    color: var(--dark);
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    text-decoration: none;
+  }
+
+  /* ── HERO ── */
+  .page-hero {
+    background: var(--off);
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .page-hero p {
+    color: var(--mid);
+    font-size: 0.9rem;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+
+  /* ── SEARCH BOX ── */
+  .search-box {
+    background: var(--off);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .search-box h2 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--ink);
+  }
+
+  .field-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .field label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .field input {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.45rem 0.75rem;
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--ink);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .field input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(42,100,150,0.12);
+  }
+
+  .field input::placeholder { color: var(--mid); }
+
+  .field-hint {
+    font-size: 0.72rem;
+    color: var(--mid);
+    margin-top: 0.2rem;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1.4rem;
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+    align-self: flex-end;
+  }
+
+  .btn-primary:hover { background: var(--link-hov); }
+  .btn-primary:disabled { background: var(--mid); cursor: not-allowed; }
+
+  /* ── STATUS ── */
+  .status-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--mid);
+    margin-bottom: 1.25rem;
+  }
+
+  .spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .progress-bar {
+    height: 3px;
+    background: var(--light);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.35s ease;
+  }
+
+  /* ── ALERTS ── */
+  .alert {
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--red);
+    background: #fdf4f4;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    color: var(--red);
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .alert-info {
+    border-left-color: var(--accent);
+    background: #f0f6fb;
+    color: var(--accent);
+  }
+
+  /* ── SECTION HEADINGS ── */
+  .section-label {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--light);
+  }
+
+  /* ── STAT GRID ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .stat-item {
+    background: var(--white);
+    padding: 1.1rem 1rem;
+    text-align: center;
+    transition: background 0.15s;
+  }
+
+  .stat-item:hover { background: var(--off); }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-head {
+    background: var(--off);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .card-badge {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: var(--mid);
+    background: var(--light);
+    border-radius: 20px;
+    padding: 0.1rem 0.55rem;
+  }
+
+  .card-body { padding: 1.25rem 1rem; }
+
+
+
+  /* ── KV LIST ── */
+  .kv-list { list-style: none; }
+
+  .kv-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--light);
+    font-size: 0.83rem;
+  }
+
+  .kv-list li:last-child { border-bottom: none; }
+  .kv-k { color: var(--mid); flex-shrink: 0; }
+  .kv-v { color: var(--ink); text-align: right; }
+
+  /* ── TABLE ── */
+  table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+
+  th {
+    text-align: left;
+    font-size: 0.72rem;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.45rem 0.75rem;
+    border-bottom: 2px solid var(--light);
+    font-weight: 700;
+    background: var(--off);
+  }
+
+  td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--light);
+    vertical-align: middle;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--off); }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 2px;
+    margin-left: 0.35rem;
+    vertical-align: middle;
+    background: var(--light);
+    color: var(--dark);
+  }
+
+  .tag-blue  { background: #dbeafe; color: #1e40af; }
+  .tag-gold  { background: #fef3c7; color: #92400e; }
+
+  .inline-bar {
+    height: 5px;
+    background: var(--light);
+    border-radius: 3px;
+    overflow: hidden;
+    min-width: 60px;
+  }
+
+  .inline-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 3px;
+    opacity: 0.7;
+  }
+
+
+
+  /* ── EMPTY STATE ── */
+  .empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--mid);
+    font-size: 0.88rem;
+  }
+
+  .empty-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; opacity: 0.3; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.78rem;
+    color: var(--mid);
+  }
+
+  footer a { color: var(--mid); }
+  footer a:hover { color: var(--accent); }
+
+  /* ── ANIMATIONS ── */
+  .fade-in { animation: fadeIn 0.3s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  @media (max-width: 500px) {
+    .field-row { flex-direction: column; }
+    .btn-primary { width: 100%; }
+    .stat-num { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">GitHub Analyzer</a>
+    <ul class="nav-links">
+      <li><a href="#overview"     class="active">Overview</a></li>
+      <li><a href="#contributors">Contributors</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>GitHub Contribution Analyzer</h1>
+  <p>Enter any public repository to pull live contribution data and generate a full analysis report.</p>
+</div>
+
+<main>
+
+  <div class="search-box">
+    <h2>Analyze a Repository</h2>
+    <div class="field-row">
+      <div class="field" style="max-width:320px">
+        <label for="repoInput">Repository</label>
+        <input id="repoInput" type="text" placeholder="owner/repo or GitHub URL" value="PostHog/posthog">
+      </div>
+      <div class="field" style="max-width:280px">
+        <label for="tokenInput">GitHub Token <span style="font-weight:300;text-transform:none;letter-spacing:0">(optional)</span></label>
+        <input id="tokenInput" type="password" placeholder="ghp_… raises rate limit to 5000/hr">
+        <span class="field-hint">Without a token, GitHub allows 60 requests/hr per IP.</span>
+      </div>
+      <button class="btn-primary" id="analyzeBtn" onclick="analyze()">Analyze</button>
+    </div>
+  </div>
+
+  <div class="status-row" id="statusRow" style="display:none">
+    <div class="spinner"></div>
+    <span id="statusText">Loading…</span>
+  </div>
+
+  <div class="progress-bar" id="progressBar" style="display:none">
+    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+  </div>
+
+  <div class="alert" id="errorBox" style="display:none"></div>
+
+  <div id="results"></div>
+
+  <div class="empty" id="emptyState">
+    <span class="empty-icon">◻</span>
+    Enter a repository above and click <strong>Analyze</strong> to begin.
+  </div>
+
+</main>
+
+<footer>
+  <p>GitHub Contribution Analyzer &mdash; Data fetched live via the
+    <a href="https://docs.github.com/en/rest" target="_blank">GitHub REST API</a>.
+  </p>
+</footer>
+
+<script>
+/* ── Utilities ──────────────────────────────────────────────────── */
+function parseRepo(s) {
+  s = s.trim().replace(/\/$/, '');
+  const m = s.match(/github\.com\/([^/?#]+\/[^/?#]+)/);
+  if (m) return m[1].replace(/\.git$/, '');
+  if (/^[^/]+\/[^/]+$/.test(s)) return s;
+  return null;
+}
+
+function setProgress(pct, label) {
+  document.getElementById('progressFill').style.width = pct + '%';
+  if (label) document.getElementById('statusText').textContent = label;
+}
+
+function showLoading(msg) {
+  document.getElementById('statusRow').style.display = 'flex';
+  document.getElementById('progressBar').style.display = 'block';
+  document.getElementById('statusText').textContent = msg;
+}
+
+function hideLoading() {
+  document.getElementById('statusRow').style.display = 'none';
+  document.getElementById('progressBar').style.display = 'none';
+}
+
+function showError(msg) {
+  const b = document.getElementById('errorBox');
+  b.className = 'alert';
+  b.innerHTML = '<strong>Error:</strong> ' + msg;
+  b.style.display = 'block';
+}
+
+function clearError() {
+  document.getElementById('errorBox').style.display = 'none';
+}
+
+/* ── GitHub API ─────────────────────────────────────────────────── */
+async function ghGet(path, token) {
+  const headers = { Accept: 'application/vnd.github+json' };
+  if (token) headers['Authorization'] = 'Bearer ' + token;
+  const res = await fetch('https://api.github.com' + path, { headers });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || 'HTTP ' + res.status);
+  }
+  return { data: await res.json(), headers: res.headers };
+}
+
+async function ghGetPaged(path, token, max = 300) {
+  let url = 'https://api.github.com' + path
+    + (path.includes('?') ? '&' : '?') + 'per_page=100';
+  let all = [];
+  while (url && all.length < max) {
+    const headers = { Accept: 'application/vnd.github+json' };
+    if (token) headers['Authorization'] = 'Bearer ' + token;
+    const res = await fetch(url, { headers });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || 'HTTP ' + res.status);
+    }
+    all = all.concat(await res.json());
+    const link = res.headers.get('Link') || '';
+    const next = link.match(/<([^>]+)>;\s*rel="next"/);
+    url = next ? next[1] : null;
+  }
+  return all;
+}
+
+/* ── Main ───────────────────────────────────────────────────────── */
+async function analyze() {
+  const repo  = parseRepo(document.getElementById('repoInput').value);
+  const token = document.getElementById('tokenInput').value.trim() || null;
+
+  if (!repo) {
+    showError('Please enter a valid repository (e.g. <code>owner/repo</code> or a GitHub URL).');
+    return;
+  }
+
+  document.getElementById('analyzeBtn').disabled = true;
+  document.getElementById('emptyState').style.display = 'none';
+  document.getElementById('results').innerHTML = '';
+  clearError();
+  showLoading('Connecting to GitHub…');
+  setProgress(5);
+
+  try {
+    setProgress(10, 'Fetching repository info…');
+    const { data: repoInfo } = await ghGet('/repos/' + repo, token);
+
+    setProgress(22, 'Fetching commits…');
+    const commits = await ghGetPaged('/repos/' + repo + '/commits', token, 300);
+
+    setProgress(45, 'Fetching contributors…');
+    const contributors = await ghGetPaged('/repos/' + repo + '/contributors', token, 100);
+
+    setProgress(60, 'Fetching pull requests…');
+    const prs = await ghGetPaged('/repos/' + repo + '/pulls?state=all', token, 200);
+
+    setProgress(76, 'Fetching issues…');
+    const allIssues = await ghGetPaged('/repos/' + repo + '/issues?state=all', token, 200);
+    const issues = allIssues.filter(i => !i.pull_request);
+
+    setProgress(90, 'Building report…');
+    buildReport(repo, repoInfo, commits, contributors, prs, issues);
+    setProgress(100);
+
+  } catch (err) {
+    let msg = err.message;
+    if (msg.includes('rate limit') || msg.includes('403')) {
+      msg += ' — add a GitHub personal access token to raise the limit to 5,000 req/hr.';
+    }
+    showError(msg);
+    setProgress(0);
+  }
+
+  hideLoading();
+  document.getElementById('analyzeBtn').disabled = false;
+}
+
+/* ── Build report ───────────────────────────────────────────────── */
+function buildReport(repo, repoInfo, commits, contributors, prs, issues) {
+
+
+  const aMap = {};
+  function ensureAuthor(login, avatar) {
+    if (!aMap[login]) aMap[login] = { login, avatar, commits: 0, prs: 0, issues: 0 };
+  }
+  for (const c of commits) {
+    const l = c.author?.login || c.commit?.author?.name || 'unknown';
+    ensureAuthor(l, c.author?.avatar_url || null);
+    aMap[l].commits++;
+  }
+  for (const p of prs) {
+    const l = p.user?.login || 'unknown';
+    ensureAuthor(l, p.user?.avatar_url || null);
+    aMap[l].prs++;
+  }
+  for (const i of issues) {
+    const l = i.user?.login || 'unknown';
+    ensureAuthor(l, i.user?.avatar_url || null);
+    aMap[l].issues++;
+  }
+  const topAuthors = Object.values(aMap).sort((a, b) => b.commits - a.commits).slice(0, 25);
+  const maxCommits = Math.max(...topAuthors.map(a => a.commits), 1);
+
+  /* PR & issue metrics */
+  const merged      = prs.filter(p => p.merged_at).length;
+  const closedPrs   = prs.filter(p => p.state === 'closed').length;
+  const openPrs     = prs.filter(p => p.state === 'open').length;
+  const closedIss   = issues.filter(i => i.state === 'closed').length;
+  const mergeRate   = closedPrs  > 0 ? Math.round((merged    / closedPrs)  * 100) : null;
+  const closeRate   = issues.length > 0 ? Math.round((closedIss / issues.length) * 100) : null;
+
+
+
+  /* ── Render ── */
+  document.getElementById('results').innerHTML = `
+<div class="fade-in">
+
+  <!-- Repo identity -->
+  <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.5rem">
+    <h2 style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--ink)">${repo}</h2>
+    ${repoInfo.language ? `<span class="tag tag-blue">${repoInfo.language}</span>` : ''}
+    ${repoInfo.license?.name ? `<span class="tag">${repoInfo.license.name}</span>` : ''}
+    <a href="https://github.com/${repo}" target="_blank"
+       style="margin-left:auto;font-size:0.8rem">↗ View on GitHub</a>
+  </div>
+  ${repoInfo.description
+    ? `<p style="color:var(--mid);font-size:0.88rem;margin-bottom:1.5rem">${repoInfo.description}</p>`
+    : ''}
+
+  <!-- Overview stats -->
+  <h3 class="section-label" id="overview">Overview</h3>
+  <div class="stat-grid">
+    ${si(repoInfo.stargazers_count?.toLocaleString(), 'Stars')}
+    ${si(repoInfo.forks_count?.toLocaleString(), 'Forks')}
+    ${si(repoInfo.watchers_count?.toLocaleString(), 'Watchers')}
+    ${si(prs.length.toLocaleString(), 'PRs Sampled')}
+    ${si(mergeRate != null ? mergeRate + '%' : '—', 'PR Merge Rate')}
+    ${si(issues.length.toLocaleString(), 'Issues Sampled')}
+    ${si(closeRate != null ? closeRate + '%' : '—', 'Issue Close Rate')}
+    ${si(topAuthors.length, 'Contributors Found')}
+  </div>
+
+
+  <!-- Contributors -->
+  <h3 class="section-label" id="contributors">Contributors</h3>
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Top Contributors</span>
+      <span class="card-badge">${topAuthors.length} shown</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>User</th>
+          <th>Commits</th>
+          <th>PRs</th>
+          <th>Issues</th>
+          <th style="width:140px"></th>
+        </tr>
+      </thead>
+      <tbody>
+        ${topAuthors.map((a, i) => `
+          <tr>
+            <td style="color:var(--mid);width:2.5rem">${i + 1}</td>
+            <td>
+              ${a.avatar ? `<img class="avatar" src="${a.avatar}" alt="">` : ''}
+              <a href="https://github.com/${a.login}" target="_blank">${a.login}</a>
+              ${i === 0 ? '<span class="tag tag-gold">Top</span>' : ''}
+              ${i < 3  ? '<span class="tag tag-blue">Core</span>' : ''}
+            </td>
+            <td style="font-weight:700">${a.commits.toLocaleString()}</td>
+            <td style="color:var(--mid)">${a.prs}</td>
+            <td style="color:var(--mid)">${a.issues}</td>
+            <td>
+              <div class="inline-bar">
+                <div class="inline-fill"
+                     style="width:${Math.round((a.commits / maxCommits) * 100)}%"></div>
+              </div>
+            </td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+  </div>
+
+
+</div>`;
+}
+
+/* ── Helpers ────────────────────────────────────────────────────── */
+function si(value, label) {
+  return `<div class="stat-item">
+    <div class="stat-num">${value ?? '—'}</div>
+    <div class="stat-label">${label}</div>
+  </div>`;
+}
+
+function kv(key, value) {
+  if (value === undefined || value === null || value === '') return '';
+  return `<li><span class="kv-k">${key}</span><span class="kv-v">${value}</span></li>`;
+}
+
+/* ── Nav scroll highlighting ────────────────────────────────────── */
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 70;
+  ['overview', 'contributors'].forEach(id => {
+    const el   = document.getElementById(id);
+    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+    if (el && link) {
+      if (el.offsetTop <= y) {
+        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    }
+  });
+});
+
+/* ── Auto-run on load ───────────────────────────────────────────── */
+window.addEventListener('load', analyze);
+</script>
+</body>
+</html>
